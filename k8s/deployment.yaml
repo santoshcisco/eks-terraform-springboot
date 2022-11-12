@@ -1,0 +1,26 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: springboot
+  name: springboot
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: springboot
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: springboot
+    spec:
+      containers:
+      - image: springio/gs-spring-boot-docker
+        name: springboot
+        resources: {}
+status: {}
+
