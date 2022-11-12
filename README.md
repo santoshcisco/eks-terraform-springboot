@@ -76,6 +76,7 @@ $ aws eks --region us-west-2 update-kubeconfig --name AscendionWorkshop-cluster
 
 
 $ kubectl get nodes –o wide
+
 $ kubectl get pods 
 
 **Switch to eks directory then deploy the SprintBoot application by using the below commands**
@@ -89,6 +90,7 @@ $ kubectl get deployment –l app=springboot
 **Then deploy the Service**
 
 $ kubectl apply –f service.yaml
+
 $ kubectl get svc
 
 **Now we can see the SpringBoot application deployment successfully**
