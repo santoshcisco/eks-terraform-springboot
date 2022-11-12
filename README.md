@@ -27,17 +27,54 @@ Deploy the **EKS Cluster** using **terraform** then deploy a **Spring Boot** app
 	AWS Profile is configured on your linux machine or we can use the default account also.
 
 
+**We can see the S3 bucket and DynamoDB table in the below images**
+
+
+![image](https://user-images.githubusercontent.com/38450758/201494425-b3e00949-2263-4374-8fc4-71896b6a8570.png)
+
+![image](https://user-images.githubusercontent.com/38450758/201494451-ba51a0b1-8df2-4900-a4f5-db669df83c7e.png)
+
+
+
 **Run the below command:**
 
 	$ terraform init
+
+![image](https://user-images.githubusercontent.com/38450758/201494499-aa5b6e34-c9ea-4e62-aa23-12608de8f69f.png)
+
+
 	$ terraform plan
+
+![image](https://user-images.githubusercontent.com/38450758/201494521-321a9b0f-ec26-4381-938a-c684aa920db0.png)
+
+
 	$ terraform apply
-
-
 
 **After deploying EKS cluster using terraform, the output will be like below.**
 
+
+![image](https://user-images.githubusercontent.com/38450758/201494536-ddd4110c-c5c9-4730-907e-bce98f5942a8.png)
+
+
+**We can see the terraform state file in the below image**
+
+
+![image](https://user-images.githubusercontent.com/38450758/201494730-d15653a4-e76b-4eb8-834e-13cb8475168d.png)
+
+
+**We can see the EKS Cluster deployed successfully in the below image**
+
+
+![image](https://user-images.githubusercontent.com/38450758/201494761-e7b38e49-b2d4-4a0a-b8a0-a043c338a2ec.png)
+
+
+
 $ aws eks --region us-west-2 update-kubeconfig --name AscendionWorkshop-cluster
+
+
+![image](https://user-images.githubusercontent.com/38450758/201494592-36afec1e-7b39-44c0-addd-25505ccf5577.png)
+
+
 $ kubectl get nodes –o wide
 $ kubectl get pods 
 
@@ -54,5 +91,16 @@ $ kubectl get deployment –l app=springboot
 $ kubectl apply –f service.yaml
 $ kubectl get svc
 
-**Access the SpringBoot app by entering the external address of the springboot pod in any browser**
+**Now we can see the SpringBoot application deployment successfully**
+
+
+![image](https://user-images.githubusercontent.com/38450758/201494844-568000b4-4eae-48c2-aea4-810b74fba43c.png)
+
+
+
+**Now access the SpringBoot app by entering the external address of the springboot pod in any browser from the Outside**
+
+
+![image](https://user-images.githubusercontent.com/38450758/201494863-fdbb9888-46af-44eb-8e3a-33e84cc61d37.png)
+
 
