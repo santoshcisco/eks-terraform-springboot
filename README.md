@@ -107,7 +107,7 @@ $ kubectl get svc
 
 
 
-**Now access the SpringBoot app by entering the external address of the springboot pod in any browser from the Outside**
+**Now access the SpringBoot app by entering the external address of the springboot LoadBalancer in any browser from the Outside**
 
 
 ![image](https://user-images.githubusercontent.com/38450758/201494863-fdbb9888-46af-44eb-8e3a-33e84cc61d37.png)
