@@ -10,20 +10,25 @@ Deploy the **EKS Cluster** using **terraform** then deploy a **Spring Boot** app
 **We will do in a simple way:**
 
 	At first we are going to deploy EKS Cluster with Terraform 
+
 	Secondly we are going to deploy the Spring Boot Application on the EKS Cluster.
 
 
 **let's get our hands dirty**
 
 	Clone the Github repo 
+
 	Go to src folder then add your S3 bucket name, Dynamodb table name and region in the backend.tf file for remote terraform statefile.
+
 	 Add your AWS account user access key and secret access key in the terraform.tfvars file. Other things are optional.
+
 	 S3 bucket and DynamoDB table both should be in same Region.
 
 
 **Make sure below things:**
 
 	 Access and Secret keys Add in the .bashrc file
+
 	AWS Profile is configured on your linux machine or we can use the default account also.
 
 
@@ -67,6 +72,8 @@ Deploy the **EKS Cluster** using **terraform** then deploy a **Spring Boot** app
 
 ![image](https://user-images.githubusercontent.com/38450758/201494761-e7b38e49-b2d4-4a0a-b8a0-a043c338a2ec.png)
 
+
+**Now configure the kubeconfig on your machine for access the EKS Cluster, following the below command**
 
 
 $ aws eks --region us-west-2 update-kubeconfig --name AscendionWorkshop-cluster
